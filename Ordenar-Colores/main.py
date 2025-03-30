@@ -26,6 +26,7 @@ def mostrar_menu():
 def main():
     nombre_archivo = input("Ingrese el nombre del archivo de la carpeta Input: ")
     matriz = txt_a_matriz(nombre_archivo)
+    print(matriz)
     
     if matriz is None:
         return
