@@ -1,6 +1,6 @@
 x x x x x x
 x x x x x x
 R G Y B x x
-R R B Y x x
-R R B Y x x
+R G B Y x x
+R G B Y x x
 G R Y B x x
