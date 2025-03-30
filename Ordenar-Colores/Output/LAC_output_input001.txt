@@ -1,0 +1,216 @@
+Paso 0:
+_ _ _ _ _ _
+_ _ _ _ _ _
+R G Y B _ _
+R R B Y _ _
+R R B Y _ _
+G R Y B _ _
+
+Paso 1:
+_ _ _ _ _ _
+_ _ _ _ _ _
+R G _ B _ _
+R R B Y _ _
+R R B Y _ _
+G R Y B Y _
+
+Paso 2:
+_ _ _ _ _ _
+_ _ _ _ _ _
+R G _ B _ _
+R R _ Y _ _
+R R B Y _ _
+G R Y B Y B
+
+Paso 3:
+_ _ _ _ _ _
+_ _ _ _ _ _
+R G _ B _ _
+R R _ Y _ _
+R R _ Y _ B
+G R Y B Y B
+
+Paso 4:
+_ _ _ _ _ _
+_ _ _ _ _ _
+R G _ B _ _
+R R _ Y _ _
+R R _ Y Y B
+G R _ B Y B
+
+Paso 5:
+_ _ _ _ _ _
+_ _ _ _ _ _
+R G _ _ _ _
+R R _ Y _ _
+R R _ Y Y B
+G R B B Y B
+
+Paso 6:
+_ _ _ _ _ _
+_ _ _ _ _ _
+R G _ _ _ _
+R R _ _ Y _
+R R _ Y Y B
+G R B B Y B
+
+Paso 7:
+_ _ _ _ _ _
+_ _ _ _ _ _
+R G _ _ Y _
+R R _ _ Y _
+R R _ _ Y B
+G R B B Y B
+
+Paso 8:
+_ _ _ _ _ _
+_ _ _ _ _ _
+R G _ _ Y _
+R R _ _ Y _
+R R B _ Y B
+G R B _ Y B
+
+Paso 9:
+_ _ _ _ _ _
+_ _ _ _ _ _
+R _ _ _ Y _
+R R _ _ Y _
+R R B _ Y B
+G R B G Y B
+
+Paso 10:
+_ _ _ _ _ _
+_ _ _ _ _ _
+_ R _ _ Y _
+R R _ _ Y _
+R R B _ Y B
+G R B G Y B
+
+Paso 11:
+_ _ _ _ _ _
+_ _ _ _ _ _
+_ R _ _ Y _
+R R B _ Y _
+R R B _ Y _
+G R B G Y B
+
+Paso 12:
+_ _ _ _ _ _
+_ _ _ _ _ _
+_ R B _ Y _
+R R B _ Y _
+R R B _ Y _
+G R B G Y _
+
+Paso 13:
+_ _ _ _ _ _
+_ _ _ _ _ _
+_ R B _ Y _
+_ R B _ Y _
+R R B _ Y _
+G R B G Y R
+
+Paso 14:
+_ _ _ _ _ _
+_ _ _ _ _ _
+_ R B _ Y _
+_ R B _ Y _
+_ R B _ Y R
+G R B G Y R
+
+Paso 15:
+_ _ _ _ _ _
+_ _ _ _ _ _
+_ R B _ Y _
+_ R B _ Y _
+_ R B G Y R
+_ R B G Y R
+
+Paso 16:
+_ _ _ _ _ _
+_ _ _ _ _ _
+_ _ B _ Y _
+_ R B _ Y _
+_ R B G Y R
+R R B G Y R
+
+Paso 17:
+_ _ _ _ _ _
+_ _ _ _ _ _
+_ _ B _ Y _
+_ _ B _ Y _
+R R B G Y R
+R R B G Y R
+
+Paso 18:
+_ _ _ _ _ _
+_ _ _ _ _ _
+_ _ B _ Y _
+R _ B _ Y _
+R _ B G Y R
+R R B G Y R
+
+Paso 19:
+_ _ _ _ _ _
+_ _ _ _ _ _
+R _ B _ Y _
+R _ B _ Y _
+R _ B G Y R
+R _ B G Y R
+
+Paso 20:
+_ _ _ _ _ _
+_ _ _ _ _ _
+R _ B _ Y _
+R _ B _ Y _
+R _ B _ Y R
+R G B G Y R
+
+Paso 21:
+_ _ _ _ _ _
+_ _ _ _ _ _
+R _ B _ Y _
+R _ B _ Y _
+R G B _ Y R
+R G B _ Y R
+
+Paso 22:
+_ _ _ _ _ _
+_ _ _ _ _ _
+R _ B _ _ _
+R _ B _ Y _
+R G B _ Y R
+R G B Y Y R
+
+Paso 23:
+_ _ _ _ _ _
+_ _ _ _ _ _
+R _ B _ _ _
+R _ B _ _ _
+R G B Y Y R
+R G B Y Y R
+
+Paso 24:
+_ _ _ _ _ _
+_ _ _ _ _ _
+R _ B _ _ _
+R _ B Y _ _
+R G B Y _ R
+R G B Y Y R
+
+Paso 25:
+_ _ _ _ _ _
+_ _ _ _ _ _
+R _ B Y _ _
+R _ B Y _ _
+R G B Y _ R
+R G B Y _ R
+
+Paso 26:
+_ _ _ _ _ _
+_ _ _ _ _ _
+R _ B Y _ _
+R _ B Y _ _
+R G B Y _ _
+R G B Y R R
+
