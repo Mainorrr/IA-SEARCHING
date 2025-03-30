@@ -1,2 +1,3 @@
-# IA-TAREAS
-Tareas y proyectos del curso de Inteligencia Artificial 2025
+# IA-SEARCHING
+
+## Implementaciones Heuristicas y Lista cerrada, Ordenar Colores
