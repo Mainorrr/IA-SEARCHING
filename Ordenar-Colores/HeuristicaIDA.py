@@ -5,7 +5,7 @@ COLORES = ['R', 'G', 'Y', 'B']
 
 def solucionarHIDA(matriz, nombre_archivo):
     columnas = matriz_a_columnas(matriz)
-    archivo_salida = f"Output/{nombre_archivo}_output.txt"
+    archivo_salida = f"Output/IDA_output_{nombre_archivo}"
     open(archivo_salida, 'w').close()
 
     solucion = ida_star(columnas)
