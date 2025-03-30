@@ -1,22 +1,17 @@
 import copy
 
-META = 4  # Número de fichas por columna
-COLORES = ['R', 'G', 'Y', 'B'] # Colores de las fichas
+META = 4 
+COLORES = ['R', 'G', 'Y', 'B']
 
 def solucionarHIDA(matriz, nombre_archivo):
     columnas = matriz_a_columnas(matriz)
     archivo_salida = f"Output/{nombre_archivo}_output.txt"
-
-    # Limpiar archivo anterior
     open(archivo_salida, 'w').close()
 
-    # Ejecutar algoritmo y obtener solución
     solucion = ida_star(columnas)
 
-    # Guardar todos los pasos
     for paso, estado in enumerate(solucion):
         guardar_paso_en_archivo(paso, estado, archivo_salida)
-
     print(f"Solución guardada en: {archivo_salida}")
 
 # Convierte la matriz de entrada a una lista de columnas
@@ -30,6 +25,8 @@ def matriz_a_columnas(matriz):
                 columnas[col_index].append(valor)
     return columnas
 
+# Función principal para resolver el problema usando IDA*
+# Se basa en la heurística de fichas mal colocadas
 def ida_star(estado):
     limite = heuristica(estado)
     while True:
@@ -38,8 +35,9 @@ def ida_star(estado):
             return resultado
         limite += 1
 
+# Función heurística que cuenta el número de fichas mal colocadas
+# (fichas que no están en la columna correcta)
 def heuristica(estado):
-    # Cuenta fichas mal colocadas (no sobre ficha de su mismo color)
     mal_colocadas = 0
     for col in estado:
         if not col:
@@ -50,6 +48,8 @@ def heuristica(estado):
                 mal_colocadas += 1
     return mal_colocadas
 
+# Función de búsqueda recursiva que implementa el algoritmo IDA*
+# Limita la profundidad de búsqueda a un límite dado
 def busqueda(estado, g, limite, camino, visitados):
     f = g + heuristica(estado)
     if f > limite:
@@ -66,12 +66,14 @@ def busqueda(estado, g, limite, camino, visitados):
     for (i, j) in posibles_movimientos(estado):
         nuevo_estado = mover(estado, i, j)
         if camino and nuevo_estado == camino[-1]:
-            continue  # Evitar volver atrás
+            continue
         resultado = busqueda(nuevo_estado, g + 1, limite, camino + [estado], visitados)
         if resultado != "LIMITE":
             return resultado
     return "LIMITE"
 
+# Verifica si el estado actual es el objetivo
+# (todas las columnas tienen el mismo color y están llenas)
 def es_objetivo(estado):
     for columna in estado:
         if len(columna) == 0:
@@ -80,10 +82,12 @@ def es_objetivo(estado):
             return False
     return True
 
+# Convierte el estado a forma inmutable para hashing
 def estado_a_tupla(estado):
-    # Convierte el estado a forma inmutable para hashing
     return tuple(tuple(col) for col in estado)
 
+# Genera todos los movimientos posibles desde un estado dado
+# (considerando la física de caída de las fichas)
 def posibles_movimientos(estado):
     movimientos = []
     for i, origen in enumerate(estado):
@@ -93,21 +97,25 @@ def posibles_movimientos(estado):
         for j, destino in enumerate(estado):
             if i == j:
                 continue
-            if len(destino) < 6:  # Límite de altura
+            if len(destino) < 6:
                 if len(destino) == 0 or destino[-1] == ficha:
                     movimientos.append((i, j))
     return movimientos
 
+# Realiza un movimiento de una ficha de una columna a otra
+# (sin modificar el estado original)
 def mover(estado, origen, destino):
     nuevo = copy.deepcopy(estado)
     ficha = nuevo[origen].pop()
     nuevo[destino].append(ficha)
     return nuevo
 
+# Guarda el estado actual en un archivo de salida
+# en un formato legible (de arriba hacia abajo)
 def guardar_paso_en_archivo(paso, columnas, archivo_salida):
     with open(archivo_salida, 'a') as f:
         f.write(f"Paso {paso}:\n")
-        for fila in range(5, -1, -1):  # de arriba hacia abajo
+        for fila in range(5, -1, -1):
             linea = []
             for col in columnas:
                 if fila < len(col):

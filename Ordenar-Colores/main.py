@@ -1,6 +1,8 @@
 from HeuristicaA import solucionarHA
 from HeuristicaIDA import solucionarHIDA
 from ListaAbiertaCerrada import solucionarLAC
+from time import sleep as timeout
+
 
 def txt_a_matriz(nombre_archivo):
     ruta_modificada = "Input/" + nombre_archivo
@@ -24,13 +26,14 @@ def mostrar_menu():
     print("4. Salir")
 
 def main():
-    nombre_archivo = input("Ingrese el nombre del archivo de la carpeta Input: ")
-    matriz = txt_a_matriz(nombre_archivo)
-    
-    if matriz is None:
-        return
     
     while True:
+        nombre_archivo = input("Ingrese el nombre del archivo de la carpeta Input: ")
+        matriz = txt_a_matriz(nombre_archivo)
+        
+        if matriz is None:
+            return
+        
         mostrar_menu()
         opcion = input("Opción: ")
         if opcion == "1":
@@ -47,6 +50,11 @@ def main():
             break
         else:
             print("Opción no válida. Intente de nuevo.")
+        
+        timeout(1)
+        print("\nVolviendo al menú principal...")
+        timeout(3)
+
 
 if __name__ == "__main__":
     main()
