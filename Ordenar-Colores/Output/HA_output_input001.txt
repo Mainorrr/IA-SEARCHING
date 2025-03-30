@@ -43,54 +43,70 @@ _ R _ _ _ _
 _ R _ _ _ _
 _ R Y B _ _
 _ R B Y _ _
-G R B Y _ _
-G R Y B _ _
+_ R B Y G _
+_ R Y B G _
 
 Paso 6:
 _ R _ _ _ _
 _ R _ _ _ _
-_ R Y _ _ _
+_ R _ B _ _
 _ R B Y _ _
-G R B Y _ _
-G R Y B B _
+_ R B Y G _
+_ R Y B G Y
 
 Paso 7:
 _ R _ _ _ _
 _ R _ _ _ _
-_ R Y _ _ _
-_ R B _ _ _
-G R B Y _ _
-G R Y B B Y
+_ R _ B _ _
+_ R _ Y _ _
+_ R B Y G _
+B R Y B G Y
 
 Paso 8:
 _ R _ _ _ _
 _ R _ _ _ _
-_ R Y _ _ _
-_ R B _ _ _
-G R B _ _ Y
-G R Y B B Y
+_ R _ B _ _
+_ R _ Y _ _
+B R _ Y G _
+B R Y B G Y
 
 Paso 9:
 _ R _ _ _ _
 _ R _ _ _ _
 _ R _ _ _ _
-_ R B _ _ Y
-G R B _ _ Y
-G R Y B B Y
+B R _ Y _ _
+B R _ Y G _
+B R Y B G Y
 
 Paso 10:
 _ R _ _ _ _
 _ R _ _ _ _
 _ R _ _ _ _
-_ R _ _ _ Y
-G R B B _ Y
-G R Y B B Y
+B R _ _ _ _
+B R Y Y G _
+B R Y B G Y
 
 Paso 11:
 _ R _ _ _ _
 _ R _ _ _ _
 _ R _ _ _ _
-_ R _ B _ Y
-G R _ B _ Y
-G R Y B B Y
+B R Y _ _ _
+B R Y _ G _
+B R Y B G Y
+
+Paso 12:
+_ R _ _ _ _
+_ R _ _ _ _
+B R _ _ _ _
+B R Y _ _ _
+B R Y _ G _
+B R Y _ G Y
+
+Paso 13:
+_ R _ _ _ _
+_ R _ _ _ _
+B R Y _ _ _
+B R Y _ _ _
+B R Y _ G _
+B R Y _ G _
 

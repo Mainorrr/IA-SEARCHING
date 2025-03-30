@@ -16,6 +16,21 @@ def heuristica(matriz):
     
     return mal_colocadas
 
+def es_estado_final(matriz):
+    """Verifica si la matriz es un estado final válido, donde cada letra solo aparece en una única columna."""
+    letra_columnas = {}
+    for col in range(len(matriz[0])):
+        letras = [fila[col] for fila in matriz if fila[col] != "_"]
+        if not letras:
+            continue
+        tipo_letra = letras[0]
+        if any(letra != tipo_letra for letra in letras):
+            return False
+        if tipo_letra in letra_columnas:
+            return False  # Una letra ya apareció en otra columna
+        letra_columnas[tipo_letra] = col
+    return True
+
 def aplicar_gravedad(matriz):
     """Hace que las letras caigan al espacio disponible más abajo en cada columna."""
     nueva_matriz = [["_" for _ in range(len(matriz[0]))] for _ in range(len(matriz))]
@@ -70,7 +85,7 @@ def resolver_a_estrella(matriz):
             continue
         visitados.add(clave_estado)
         
-        if heuristica(estado_actual) == 0:
+        if es_estado_final(estado_actual):
             return camino + [estado_actual]  # Solución encontrada
         
         for nuevo_estado in generar_movimientos(estado_actual):
