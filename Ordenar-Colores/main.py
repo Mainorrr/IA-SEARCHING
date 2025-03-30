@@ -26,7 +26,6 @@ def mostrar_menu():
 def main():
     nombre_archivo = input("Ingrese el nombre del archivo de la carpeta Input: ")
     matriz = txt_a_matriz(nombre_archivo)
-    print(matriz)
     
     if matriz is None:
         return
@@ -36,13 +35,13 @@ def main():
         opcion = input("Opción: ")
         if opcion == "1":
             print("\nEjecutando Lista Abierta y Cerrada")
-            solucionarLAC(matriz)
+            solucionarLAC(matriz,nombre_archivo)
         elif opcion == "2":
             print("\nEjecutando Heurística A*")
-            solucionarHA(matriz)
+            solucionarHA(matriz,nombre_archivo)
         elif opcion == "3":
             print("\nEjecutando Heurística IDA*")
-            solucionarHIDA(matriz)
+            solucionarHIDA(matriz,nombre_archivo)
         elif opcion == "4":
             print("Cerrando el programa")
             break
