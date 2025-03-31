@@ -2,22 +2,20 @@ import heapq
 import os
 
 def heuristica(matriz):
-    """Calcula la heurística como la cantidad de letras fuera de su columna objetivo."""
+    # La heuristica se calcula con la cantidad de fichas fuera de la columna objetivo
     columnas = {c: [] for c in range(len(matriz[0]))}
     for fila in matriz:
         for col, valor in enumerate(fila):
             if valor != "_":
                 columnas[col].append(valor)
-    
     mal_colocadas = 0
     for col, valores in columnas.items():
-        if valores and len(set(valores)) > 1:  # Si hay más de un tipo de letra
+        if valores and len(set(valores)) > 1: 
             mal_colocadas += len(valores)
-    
     return mal_colocadas
 
 def es_estado_final(matriz):
-    """Verifica si la matriz es un estado final válido, donde cada letra solo aparece en una única columna."""
+    # Revisa si la matriz es un estado de solucion
     letra_columnas = {}
     for col in range(len(matriz[0])):
         letras = [fila[col] for fila in matriz if fila[col] != "_"]
@@ -27,7 +25,7 @@ def es_estado_final(matriz):
         if any(letra != tipo_letra for letra in letras):
             return False
         if tipo_letra in letra_columnas:
-            return False  # Una letra ya apareció en otra columna
+            return False
         letra_columnas[tipo_letra] = col
     return True
 
@@ -73,7 +71,6 @@ def generar_movimientos(matriz):
     return movimientos
 
 def resolver_a_estrella(matriz):
-    """Resuelve el problema usando A* y devuelve los pasos."""
     prioridad = [(heuristica(matriz), 0, matriz, [])]  # (h, g, estado, camino)
     visitados = set()
     
@@ -94,7 +91,6 @@ def resolver_a_estrella(matriz):
     return None  # No se encontró solución
 
 def guardar_solucion(nombre_archivo, solucion):
-    """Guarda la solución en un archivo de salida."""
     ruta_output = os.path.join("Output", f"HA_output_{nombre_archivo}")
     os.makedirs("Output", exist_ok=True)
     with open(ruta_output, "w") as f:
@@ -105,6 +101,7 @@ def guardar_solucion(nombre_archivo, solucion):
             f.write("\n")
 
 def solucionarHA(matriz, nombre_archivo):
+
     solucion = resolver_a_estrella(matriz)
     if solucion:
         guardar_solucion(nombre_archivo, solucion)
