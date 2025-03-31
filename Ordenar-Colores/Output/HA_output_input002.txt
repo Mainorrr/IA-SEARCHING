@@ -1,0 +1,56 @@
+Paso 0:
+_ _ _ _ _ _
+_ _ _ _ _ _
+B R Y G _ _
+Y B G R _ _
+Y B G R _ _
+Y B G R _ _
+
+Paso 1:
+_ _ _ _ _ _
+_ _ _ _ _ _
+B R Y _ _ _
+Y B G R _ _
+Y B G R _ _
+Y B G R G _
+
+Paso 2:
+_ _ _ _ _ _
+_ _ _ _ _ _
+B R _ _ _ _
+Y B G R _ _
+Y B G R _ _
+Y B G R G Y
+
+Paso 3:
+_ _ _ _ _ _
+_ _ _ _ _ _
+B _ _ R _ _
+Y B G R _ _
+Y B G R _ _
+Y B G R G Y
+
+Paso 4:
+_ _ _ _ _ _
+_ _ _ _ _ _
+_ B _ R _ _
+Y B G R _ _
+Y B G R _ _
+Y B G R G Y
+
+Paso 5:
+_ _ _ _ _ _
+_ _ _ _ _ _
+Y B _ R _ _
+Y B G R _ _
+Y B G R _ _
+Y B G R G _
+
+Paso 6:
+_ _ _ _ _ _
+_ _ _ _ _ _
+Y B G R _ _
+Y B G R _ _
+Y B G R _ _
+Y B G R _ _
+

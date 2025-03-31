@@ -1,0 +1,8 @@
+Paso 0:
+_ _ _ _ _ _
+_ _ _ _ _ _
+R G B Y _ _
+R G B Y _ _
+R G B Y _ _
+R G B Y _ _
+

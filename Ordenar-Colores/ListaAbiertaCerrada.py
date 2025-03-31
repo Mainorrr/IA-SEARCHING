@@ -99,8 +99,6 @@ def guardar_solucion(nombre_archivo, solucion):
 
 #Funcion solucion
 def solucionarLAC(matriz, nombre_archivo):
-    print("Solucionando con Lista Abierta y Cerrada...")
-
     # Convertimos la matriz de entrada en columnas (pilas)
     columnas = [[] for _ in range(6)]
     for fila in reversed(matriz):  # empezamos desde abajo
@@ -126,8 +124,6 @@ def solucionarLAC(matriz, nombre_archivo):
         mejor_camino = camino
 
         if es_estado_objetivo(estado_actual):
-            print("\n¡Solución encontrada!")
-            print("Número de movimientos:", len(camino))
             solucion_completa = [estado_inicial]
             actual = estado_inicial
             for mov in camino:
@@ -136,6 +132,7 @@ def solucionarLAC(matriz, nombre_archivo):
                 nuevo_estado[mov[1]].append(ficha)
                 solucion_completa.append(copy.deepcopy(nuevo_estado))
                 actual = nuevo_estado
+            print(f"Solución guardada en Output/LAC_output_{nombre_archivo}")
             guardar_solucion(nombre_archivo, solucion_completa)
             return
 

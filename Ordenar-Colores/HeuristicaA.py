@@ -105,7 +105,6 @@ def guardar_solucion(nombre_archivo, solucion):
             f.write("\n")
 
 def solucionarHA(matriz, nombre_archivo):
-    print("Solucionando")
     solucion = resolver_a_estrella(matriz)
     if solucion:
         guardar_solucion(nombre_archivo, solucion)
